@@ -20,13 +20,13 @@ return [
             'endtime' => 'endtime',
             'fe_group' => 'fe_group',
         ],
-        'searchFields' => 'term,title,alias',
+        'searchFields' => 'term,title',
         'typeicon_classes' => [
             'default' => 'extension-arcglossary-glossary-entries',
         ],
     ],
     'types' => [
-        '0' => ['showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,term,title,alias,type,description,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access'],
+        '0' => ['showitem' => '--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,term,title,description,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,--palette--;;language,--div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,--palette--;;hidden,--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.access;access'],
     ],
     'palettes' => [
         'access' => [
@@ -149,32 +149,6 @@ return [
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-            ],
-        ],
-        'alias' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:arc_glossary/Resources/Private/Language/locallang_db.xlf:tx_arcglossary_glossary_entries.alias',
-            'config' => [
-                'type' => 'text',
-                'cols' => 30,
-                'rows' => 5,
-            ],
-        ],
-        'type' => [
-            'exclude' => 1,
-            'label' => 'LLL:EXT:arc_glossary/Resources/Private/Language/locallang_db.xlf:tx_arcglossary_glossary_entries.type',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectSingle',
-                'default' => '',
-                'items' => [
-                    ['LLL:EXT:arc_glossary/Resources/Private/Language/locallang_db.xlf:tx_arcglossary_glossary_entries.type.I.0', 'no'],
-                    ['LLL:EXT:arc_glossary/Resources/Private/Language/locallang_db.xlf:tx_arcglossary_glossary_entries.type.I.1', 'dfn'],
-                    ['LLL:EXT:arc_glossary/Resources/Private/Language/locallang_db.xlf:tx_arcglossary_glossary_entries.type.I.2', 'acronym'],
-                    ['LLL:EXT:arc_glossary/Resources/Private/Language/locallang_db.xlf:tx_arcglossary_glossary_entries.type.I.3', 'abbr'],
-                ],
-                'size' => 1,
-                'maxitems' => 1,
             ],
         ],
         'description' => [

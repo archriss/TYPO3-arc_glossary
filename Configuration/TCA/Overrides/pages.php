@@ -11,6 +11,8 @@ call_user_func(function () {
                 'label' => 'LLL:EXT:arc_glossary/Resources/Private/Language/locallang_db.xml:pages.tx_arcglossary_donotparse',
                 'config' => [
                     'type' => 'check',
+                    'renderType' => 'checkboxToggle',
+                    'default' => 0,
                 ],
             ],
         ]

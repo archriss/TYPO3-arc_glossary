@@ -24,7 +24,7 @@ class Parser implements MiddlewareInterface
     protected ?TypoScriptFrontendController $controller = null;
 
     protected array $conf = [];
-    protected string $abbrTag = '<abbr><span class="tooltip" title="%s">%s</span></abbr>';
+    protected string $abbrTag = '<abbr title="%s">%s</abbr>';
 
     /**
      * Process an incoming server request.
@@ -139,7 +139,7 @@ class Parser implements MiddlewareInterface
     }
 
     /**
-     * Retrieve and returns parsercontent expressions array
+     * Retrieve and returns glossary expressions array
      *
      * @return array of expressions to search
      * @throws \Doctrine\DBAL\DBALException
@@ -147,24 +147,14 @@ class Parser implements MiddlewareInterface
      */
     protected function getParsercontentExpressions(): array
     {
-        if ($this->conf['pidInList'] ?? false) {
-            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-                ->getQueryBuilderForTable('tx_arcglossary_glossary_entries');
-            return $queryBuilder
-                ->select('uid', 'term', 'alias', 'type', 'language', 'title')
-                ->addSelectLiteral('LENGTH(term) as lgth')
-                ->from('tx_arcglossary_glossary_entries')
-                ->where(
-                    $queryBuilder->expr()->in(
-                        'pid',
-                        $queryBuilder->createNamedParameter($this->conf['pidInList'])
-                    )
-                )
-                ->orderBy('lgth', 'DESC')
-                ->execute()
-                ->fetchAllAssociative();
-        } else {
-            return [];
-        }
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+            ->getQueryBuilderForTable('tx_arcglossary_glossary_entries');
+        return $queryBuilder
+            ->select('uid', 'term', 'title')
+            ->addSelectLiteral('LENGTH(term) as lgth')
+            ->from('tx_arcglossary_glossary_entries')
+            ->orderBy('lgth', 'DESC')
+            ->execute()
+            ->fetchAllAssociative();
     }
 }
