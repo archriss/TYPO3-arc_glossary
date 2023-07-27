@@ -1,0 +1,8 @@
+plugin.tx_arcglossary {
+    pidInList = {$pages_uid.glossary}
+    parser {
+        replacementTypolink {
+            
+        }
+    }
+}

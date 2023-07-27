@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2023-01-13T14:22:20Z" product-name="arc_glossary">
+        <body>
+            <trans-unit id="pages.tx_arcglossary_donotparse">
+                <source>Ne pas parser la page avec le glossaire</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries">
+                <source>Glossary entry</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.term">
+                <source>Term</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.language.I.0">
+                <source>French</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.language.I.1">
+                <source>English</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.language">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.type.I.0">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.type.I.1">
+                <source>Definition</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.type.I.2">
+                <source>Acronym, e.g. PDF</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.type.I.3">
+                <source>Abbreviation, e.g. etc.</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.alias">
+                <source>Alias</source>
+            </trans-unit>
+            <trans-unit id="tx_arcglossary_glossary_entries.link">
+                <source>Link</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

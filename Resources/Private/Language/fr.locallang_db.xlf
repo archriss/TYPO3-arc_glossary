@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+	<file source-language="fr" datatype="plaintext" original="messages" date="2023-01-13T14:22:20Z" product-name="arc_glossary">
+		<body>
+			<trans-unit id="pages.tx_arcglossary_donotparse">
+				<source>Ne pas parser la page avec le glossaire</source>
+				<target state="translated">Ne pas parser la page avec le glossaire</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries">
+				<source>Glossary entry</source>
+				<target state="translated">Entrée du glossaire</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.term">
+				<source>Term</source>
+				<target state="translated">Terme</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.title">
+				<source>Title</source>
+				<target state="translated">Titre</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.language.I.0">
+				<source>French</source>
+				<target state="translated">Français</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.language.I.1">
+				<source>English</source>
+				<target state="translated">Anglais</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.language">
+				<source>Language</source>
+				<target state="translated">Langue</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.type.I.0">
+				<source>None</source>
+				<target state="translated">Aucun</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.type.I.1">
+				<source>Definition</source>
+				<target state="translated">Définition</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.type.I.2">
+				<source>Acronym, e.g. PDF</source>
+				<target state="translated">Acronyme, ex. PDF</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.type.I.3">
+				<source>Abbreviation, e.g. etc.</source>
+				<target state="translated">Abréviation, ex. etc.</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.type">
+				<source>Type</source>
+				<target state="translated">Type</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.description">
+				<source>Description</source>
+				<target state="translated">Description</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.alias">
+				<source>Alias</source>
+				<target state="translated">Alias</target>
+			</trans-unit>
+			<trans-unit id="tx_arcglossary_glossary_entries.link">
+				<source>Link</source>
+				<target state="translated">Lien</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
