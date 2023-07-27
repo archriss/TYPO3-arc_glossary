@@ -15,6 +15,7 @@ For more information on handling watch Parser.php
 - Abbr tag can be overrided in extension configuration
 - Typolink configuration can be altered in typoscript
 - Add extension typoscript configuration
-- Specify page glossary uid in constants using : pages_uid.glossary
+- Specify glossary storage uids in site configuration : settings: glossaryStorageUidList
+- OR
+- Specify glossary storage uids in constants using (override site configuration) : glossaryStorageUidList
 - Clear cache
-

@@ -1,5 +1,5 @@
 plugin.tx_arcglossary {
-    pidInList = {$pages_uid.glossary}
+    pidInList = {$glossaryStorageUidList}
     parser {
         replacementTypolink {
             
