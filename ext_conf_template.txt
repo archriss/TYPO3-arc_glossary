@@ -1,5 +1,5 @@
 # cat=basic/enable; type=boolean; label=Enable parsing
-enable.parsing = 1
+enable.parsing = 0
 
 # cat=content/typo; type=string; label=abbr tag encapsulated in a tag: default. <abbr title="%s">%s</abbr>
 format.abbrTag =

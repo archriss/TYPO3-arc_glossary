@@ -3,3 +3,6 @@ services:
     autowire: true
     autoconfigure: true
     public: true
+
+  Archriss\ArcGlossary\Utility\GlossaryUtility:
+    public: true
