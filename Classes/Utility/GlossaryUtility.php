@@ -31,7 +31,7 @@ class GlossaryUtility implements SingletonInterface
             $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
                 ->getQueryBuilderForTable('tx_arcglossary_glossary_entries');
             $this->expressions = $queryBuilder
-                ->select('uid', 'term', 'title', 'pid')
+                ->select('uid', 'pid', 'term', 'title', 'description')
                 ->addSelectLiteral('LENGTH(term) as lgth')
                 ->from('tx_arcglossary_glossary_entries')
                 ->orderBy('lgth', 'DESC')
