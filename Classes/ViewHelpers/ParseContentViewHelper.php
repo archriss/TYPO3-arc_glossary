@@ -51,13 +51,14 @@ class ParseContentViewHelper extends AbstractViewHelper
      * @param array $arguments
      * @param \Closure $renderChildrenClosure
      * @param RenderingContextInterface $renderingContext
+     * @return string
      */
-    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext)
+    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext): string
     {
         $glossaryUtility = GeneralUtility::makeInstance(GlossaryUtility::class);
         $expressions = $glossaryUtility->getExpressions($arguments['wordsPid']);
         $content = $renderChildrenClosure();
-        if (count($expressions) && $content !== '') {
+        if ($glossaryUtility->isParsingEnabled() && count($expressions) && $content !== '') {
             $cObj = GeneralUtility::makeInstance(ContentObjectRenderer::class);
             foreach ($expressions as $row) {
                 $word = $row['term'];

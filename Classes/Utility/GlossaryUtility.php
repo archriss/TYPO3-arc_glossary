@@ -11,7 +11,7 @@ class GlossaryUtility implements SingletonInterface
 {
 
     protected array $expressions = [];
-    protected bool $parse = false;
+    protected bool $parsingEnabled = false;
     protected array $pidLimitedExpressions = [];
 
     public function __construct(TypoScriptFrontendController $typoScriptFrontendController)
@@ -19,25 +19,28 @@ class GlossaryUtility implements SingletonInterface
         // Search for forced parse through get parameter or page parsing enabled 
         $getParse = GeneralUtility::_GET('parse');
         if (!is_null($getParse) && (bool)$getParse) {
-            $this->parse = true;
+            $this->parsingEnabled = true;
         } else {
-            $this->parse = (!($typoScriptFrontendController->page['tx_arcglossary_donotparse'] ?? false));
+            $this->parsingEnabled = (!($typoScriptFrontendController->page['tx_arcglossary_donotparse'] ?? false));
         }
+    }
+
+    public function isParsingEnabled(): bool
+    {
+        return $this->parsingEnabled;
     }
 
     public function initializeObject()
     {
-        if ($this->parse) {
-            $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
-                ->getQueryBuilderForTable('tx_arcglossary_glossary_entries');
-            $this->expressions = $queryBuilder
-                ->select('uid', 'pid', 'term', 'title', 'description')
-                ->addSelectLiteral('LENGTH(term) as lgth')
-                ->from('tx_arcglossary_glossary_entries')
-                ->orderBy('lgth', 'DESC')
-                ->execute()
-                ->fetchAllAssociative();
-        }
+        $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)
+            ->getQueryBuilderForTable('tx_arcglossary_glossary_entries');
+        $this->expressions = $queryBuilder
+            ->select('uid', 'pid', 'term', 'title', 'description')
+            ->addSelectLiteral('LENGTH(term) as lgth')
+            ->from('tx_arcglossary_glossary_entries')
+            ->orderBy('lgth', 'DESC')
+            ->execute()
+            ->fetchAllAssociative();
     }
 
     public function getExpressions(int $pid = null): array
